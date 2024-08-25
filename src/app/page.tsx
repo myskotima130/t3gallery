@@ -20,6 +20,11 @@ export default async function HomePage() {
   return (
     <main className="">
       <div className="flex flex-wrap gap-4">
+        {posts.map((post) => (
+          <div className="w-48" key={post.id}>
+            {post.name}
+          </div>
+        ))}
         {mockImages.map((image) => (
           <div className="w-48" key={image.id}>
             <img src={image.url} />
