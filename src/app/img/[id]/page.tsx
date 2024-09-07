@@ -1,5 +1,8 @@
-import React from "react";
+import FullPageImageView from "~/components/full-image-page";
 
-export default function PhotoModal({ params }: { params: { id: string } }) {
-  return <div>{params.id}</div>;
+export default function PhotoPage({ params }: { params: { id: string } }) {
+  const idAsNumber = Number(params.id);
+  if (isNaN(idAsNumber)) throw new Error("Invalid id");
+
+  return <FullPageImageView id={idAsNumber} />;
 }
