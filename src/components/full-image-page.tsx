@@ -12,7 +12,7 @@ export default async function FullPageImageView(props: { id: number }) {
         <img
           src={image.url}
           alt={image.name}
-          className="max-h-[80%] flex-shrink object-contain"
+          className="max-h-[85%] flex-shrink object-contain"
         />
       </div>
 
